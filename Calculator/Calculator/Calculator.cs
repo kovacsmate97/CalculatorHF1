@@ -24,5 +24,13 @@ namespace Calculator
         {
             return egyikszam / masikszam;
         }
+        public static double CE(double egyikszam, double masikszam)
+        {
+            return egyikszam;
+        }
+        public static double C(double egyikszam, double masikszam)
+        {
+            return 0;
+        }
     }
 }
