@@ -16,5 +16,22 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void button_click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0")
+                textBox1.Clear();
+
+            Button button = (Button)sender;
+            textBox1.Text = textBox1.Text + button.Text;
+        }
+
+        private void elojel(object sender, EventArgs e)
+        {
+            if (textBox1.Text.StartsWith("-"))
+                textBox1.Text = textBox1.Text.Substring(1);
+            else if (!string.IsNullOrEmpty(textBox1.Text) && decimal.Parse(textBox1.Text) != 0)
+                textBox1.Text = "-" + textBox1.Text;
+        }
     }
 }
