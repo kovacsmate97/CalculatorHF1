@@ -9,3 +9,6 @@ C:\Users\HackerPro\documents\visual studio 2012\Projects\Calculator\Calculator\o
 C:\Users\HackerPro\Source\Repos\CalculatorHF1\Calculator\Calculator\bin\Debug\Calculator.exe.config
 C:\Users\HackerPro\Source\Repos\CalculatorHF1\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\HackerPro\Source\Repos\CalculatorHF1\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\MATTHEW SMITH\Source\Repos\CalculatorHF1\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\MATTHEW SMITH\Source\Repos\CalculatorHF1\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\MATTHEW SMITH\Source\Repos\CalculatorHF1\Calculator\Calculator\obj\Debug\Calculator.pdb
