@@ -17,6 +17,9 @@ namespace Calculator
             InitializeComponent();
         }
 
+        double egyikszam = 0;
+        double masikszam = 0;
+
         private void button_click(object sender, EventArgs e)
         {
             if (textBox1.Text == "0")
@@ -24,6 +27,7 @@ namespace Calculator
 
             Button button = (Button)sender;
             textBox1.Text = textBox1.Text + button.Text;
+            masikszam = Convert.ToDouble(textBox1.Text);
         }
 
         private void elojel(object sender, EventArgs e)
@@ -33,5 +37,18 @@ namespace Calculator
             else if (!string.IsNullOrEmpty(textBox1.Text) && decimal.Parse(textBox1.Text) != 0)
                 textBox1.Text = "-" + textBox1.Text;
         }
+
+        private void C(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            Calculator.C(egyikszam, masikszam);
+        }
+
+        private void CE(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            Calculator.CE(masikszam);
+        }
+
     }
 }
