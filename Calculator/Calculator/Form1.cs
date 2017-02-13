@@ -17,8 +17,9 @@ namespace Calculator
             InitializeComponent();
         }
 
-        double egyikszam = 0;
-        double masikszam = 0;
+        double x;
+        double y;
+        char operation;
 
         private void button_click(object sender, EventArgs e)
         {
@@ -27,7 +28,7 @@ namespace Calculator
 
             Button button = (Button)sender;
             textBox1.Text = textBox1.Text + button.Text;
-            masikszam = Convert.ToDouble(textBox1.Text);
+            y = Convert.ToDouble(textBox1.Text);
         }
 
         private void elojel(object sender, EventArgs e)
@@ -41,14 +42,87 @@ namespace Calculator
         private void C(object sender, EventArgs e)
         {
             textBox1.Clear();
-            Calculator.C(egyikszam, masikszam);
+            Calculator.C(x, y);
         }
 
         private void CE(object sender, EventArgs e)
         {
             textBox1.Clear();
-            Calculator.CE(masikszam);
+            Calculator.CE(y);
         }
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            if (double.TryParse(textBox1.Text, out x))
+            {
+                operation = '+';
+                textBox1.Clear();
+            }
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (double.TryParse(textBox1.Text, out x))
+            {
+                operation = '-';
+                textBox1.Clear();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (double.TryParse(textBox1.Text, out x))
+            {
+                operation = '*';
+                textBox1.Clear();
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (double.TryParse(textBox1.Text, out x))
+            {
+                operation = '/';
+                textBox1.Clear();
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                if (double.TryParse(textBox1.Text, out y))
+
+                    switch (operation)
+                    {
+                        case '+':
+
+                            textBox1.Text = (Calculator.Osszead(x, y)).ToString();
+                            break;
+
+                        case '-':
+
+                            textBox1.Text = (Calculator.Kivon(x, y)).ToString();
+                            break;
+
+                        case '*':
+
+                            textBox1.Text = (Calculator.Szorzas(x, y)).ToString();
+                            break;
+
+                        case '/':
+                            if (y == 0)
+                            {
+
+                                textBox1.Text = "0-val nem lehet osztani";
+                                return;
+                            }
+
+                            textBox1.Text = (Calculator.Osztas(x, y)).ToString();
+                            break;
+                    }
+
+            }
+        }
+
 
     }
 }

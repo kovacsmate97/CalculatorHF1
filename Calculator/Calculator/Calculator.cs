@@ -8,31 +8,31 @@ namespace Calculator
 {
     class Calculator
     {
-        public static double Osszead(double egyikszam, double masikszam)
+        public static double Osszead(double x, double y)
         {
-            return egyikszam + masikszam;
+            return x + y;
         }
-        public static double Kivon(double egyikszam, double masikszam)
+        public static double Kivon(double x, double y)
         {
-            return egyikszam - masikszam;
+            return x - y;
         }
-        public static double Szorzas(double egyikszam, double masikszam)
+        public static double Szorzas(double x, double y)
         {
-            return egyikszam * masikszam;
+            return x * y;
         }
-        public static double Osztas(double egyikszam, double masikszam)
+        public static double Osztas(double x, double y)
         {
-            return egyikszam / masikszam;
+            return x / y;
         }
-        public static void CE(double masikszam)
+        public static void CE(double y)
         {
-            masikszam = 0;
+            y = 0;
             return;
         }
-        public static void C(double egyikszam, double masikszam)
+        public static void C(double x, double y)
         {
-            egyikszam = 0;
-            masikszam = 0;
+            x = 0;
+            y = 0;
             return;
         }
     }
